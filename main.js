@@ -54,7 +54,6 @@ buttons.six.addEventListener("click", () => appendValue("6"));
 buttons.seven.addEventListener("click", () => appendValue("7"));
 buttons.eight.addEventListener("click", () => appendValue("8"));
 buttons.nine.addEventListener("click", () => appendValue("9"));
-
 buttons.add.addEventListener("click", () => appendValue("+"));
 buttons.subtract.addEventListener("click", () => appendValue("-"));
 buttons.multiply.addEventListener("click", () => appendValue("*"));
@@ -73,7 +72,18 @@ buttons.parenthesis.addEventListener("click", () => {
 
 buttons.equals.addEventListener("click", () => {
   try {
-    input.value = eval(input.value) || "0";
+    let expr = input.value;
+
+   
+    let openCount = (expr.match(/\(/g) || []).length;
+    let closeCount = (expr.match(/\)/g) || []).length;
+
+    if (openCount !== closeCount) {
+      input.value = "Error";
+      return;
+    }
+
+    input.value = eval(expr) || "0";
   } catch {
     input.value = "Error";
   }
