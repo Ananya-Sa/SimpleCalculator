@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-white flex items-center justify-center p-4">
+    <div
+      class="w-full max-w-md bg-gray-800 rounded-2xl shadow-xl border border-gray-700 p-6"
+    >
+      <input
+        type="text"
+        placeholder="0"
+        id="input"
+        class="w-full h-16 text-3xl bg-gray-900 text-gray-200 border-none rounded-lg px-4 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500 text-right font-mono"
+        readonly
+      />
+      <div class="grid grid-cols-4 gap-3">
+        <button
+          type="button"
+          class="col-span-1 bg-yellow-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          id="clear"
+        >
+          AC
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-yellow-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          id="del"
+        >
+          Del
+        </button>
+
+        <button
+          type="button"
+          class="col-span-1 bg-yellow-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          id="divide"
+        >
+          /
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-yellow-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          id="multiply"
+        >
+          *
+        </button>
+
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="seven"
+        >
+          7
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="eight"
+        >
+          8
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="nine"
+        >
+          9
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-yellow-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          id="subtract"
+        >
+          -
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="four"
+        >
+          4
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="five"
+        >
+          5
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="six"
+        >
+          6
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-yellow-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-yellow-500 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          id="add"
+        >
+          +
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="one"
+        >
+          1
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="two"
+        >
+          2
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="three"
+        >
+          3
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-blue-600 text-white rounded-lg py-3 text-lg font-semibold hover:bg-blue-500 transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+          id="equals"
+        >
+          =
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="zero"
+        >
+          0
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="decimal"
+        >
+          .
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="double-zero"
+        >
+          00
+        </button>
+        <button
+          type="button"
+          class="col-span-1 bg-gray-700 text-white rounded-lg py-3 text-lg font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-500"
+          id="parenthesis"
+        >
+          ()
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
